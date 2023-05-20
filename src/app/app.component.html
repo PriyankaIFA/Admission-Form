@@ -1,29 +1,21 @@
   <div class="div1">
     <form class="example-form" (ngSubmit)="submitForm()" #form="ngForm">
     <h2>Admission Form</h2>
-    <table class="example-full-width" cellspacing="0">
-      <tr>
-        <td>
-          <mat-form-field class="example-full-width">
-            <mat-label>First name</mat-label>
-            <input matInput name="firstname" [(ngModel)]="formData.firstname" maxlength="15" required autocomplete="off">
-          </mat-form-field>
-        </td>
-        <td>
-          <mat-form-field class="example-full-width">
-            <mat-label>Middle name</mat-label>
-            <input matInput name="middlename" [(ngModel)]="formData.middlename" maxlength="10" required autocomplete="o
-            ">
-          </mat-form-field>
-        </td>
-        <td>
-          <mat-form-field class="example-full-width">
-            <mat-label>Last name</mat-label>
-            <input matInput name="lastname" [(ngModel)]="formData.lastname" maxlength="15" required autocomplete="off">  
-          </mat-form-field>
-        </td>
-      </tr>
-    </table>
+    <mat-form-field class="example-full-width">
+      <mat-label>First name</mat-label>
+      <input matInput name="firstname" [(ngModel)]="formData.firstname" maxlength="15" required autocomplete="off">
+    </mat-form-field>
+    
+    <mat-form-field class="example-full-width">
+      <mat-label>Middle name</mat-label>
+      <input matInput name="middlename" [(ngModel)]="formData.middlename" maxlength="10" required autocomplete="off">
+    </mat-form-field>
+    
+    <mat-form-field class="example-full-width">
+      <mat-label>Last name</mat-label>
+      <input matInput name="lastname" [(ngModel)]="formData.lastname" maxlength="15" required autocomplete="off">
+    </mat-form-field>
+    
     <div class="bgc">
       <label for="gender">Select your gender:</label><br><br>
       <mat-radio-group name="gender" [(ngModel)]="formData.gender" aria-label="Select your gender" required>

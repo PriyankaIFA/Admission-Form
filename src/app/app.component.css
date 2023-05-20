@@ -17,6 +17,28 @@ h2 {
   font-size: 24px;
 }
 
+.div1 {
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 auto; /* Center the div horizontally */
+  max-width: 500px; /* Adjust the maximum width of the div as per your preference */
+}
+
+.example-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the form elements vertically */
+  text-align: center; /* Center the text within the form */
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
 .example-full-width {
   width: 100%;
 }
@@ -27,6 +49,9 @@ h2 {
   margin-bottom: 10px;
   border-radius: 5px;
 }
+
+/* Rest of the CSS code remains the same */
+
 
 label {
   font-weight: bold;
