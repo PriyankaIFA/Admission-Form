@@ -1,0 +1,91 @@
+<div class="div1">
+  <form class="example-form" (ngSubmit)="submitForm()" #form="ngForm">
+  <h2>Admission Form</h2>
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>First name</mat-label>
+          <input matInput name="firstname" [(ngModel)]="formData.firstname" maxlength="15" required autocomplete="off">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Middle name</mat-label>
+          <input matInput name="middlename" [(ngModel)]="formData.middlename" maxlength="10" required autocomplete="o
+          ">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Last name</mat-label>
+          <input matInput name="lastname" [(ngModel)]="formData.lastname" maxlength="15" required autocomplete="off">  
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+
+  <div class="bgc" >
+    <label for="gender">Select your gender:</label><br><br>
+    <mat-radio-group name="gender" [(ngModel)]="formData.gender" aria-label="Select your gender" required>
+      <mat-radio-button value="1">Male</mat-radio-button>
+      <mat-radio-button value="2">Female</mat-radio-button>
+      <mat-radio-button value="3">Transgender</mat-radio-button>
+    </mat-radio-group>
+    <mat-error *ngIf="form.controls['gender'].errors && form.controls['gender'].touched">
+      Gender is required
+    </mat-error>
+  </div>
+  
+  <br><br>
+
+<app-date-picker></app-date-picker>
+
+<br>
+
+  <div class="bgc">
+    <label for="bloodgroup">Select blood group:</label>
+    <select name="bloodgroup" [(ngModel)]="formData.bloodgroup" required>
+      <option value="A+">A+</option>  
+      <option value="A-">A-</option>
+      <option value="B+">B+</option>
+      <option value="B-">B-</option>
+      <option value="O+">O+</option>
+      <option value="O-">O-</option>
+      <option value="AB+">AB+</option>
+      <option value="AB-">AB-</option>
+    </select>
+  </div>
+  <br>
+
+  <app-chips></app-chips>
+  
+  <p>
+    <mat-form-field class="example-full-width">
+      <mat-label>Mobile Number</mat-label>
+      <input matInput name="mobilenumber" [(ngModel)]="formData.mobilenumber" maxlength="10" placeholder="Ex. 9999999999" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Email ID</mat-label>
+      <input matInput name="email" [(ngModel)]="formData.email" maxlength="40" placeholder="Ex. example@gmail.com" pattern="[a-zA-Z0-9._%+-]+@gmail\.com$" required>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field class="example-full-width">
+      <mat-label>Address</mat-label>
+      <textarea matInput name="address1" [(ngModel)]="formData.address1" placeholder="Ex. 100 Main St" maxlength="100" required></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Address 2</mat-label>
+      <textarea matInput name="address2" [(ngModel)]="formData.address2" maxlength="100" required></textarea>
+    </mat-form-field>
+  </p>
+  <app-postal></app-postal><br><br>
+  <!-- ... your existing code ... -->
+
+<button type="submit" [disabled]="form.invalid">Submit Form</button>
+
+</form>
+</div>

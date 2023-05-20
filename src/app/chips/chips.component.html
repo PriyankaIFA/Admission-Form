@@ -1,0 +1,28 @@
+<form>
+    <mat-form-field class="example-chip-list">
+      <mat-label>Favorite Subject</mat-label>
+      <mat-chip-grid #chipGrid aria-label="Subject selection">
+        <mat-chip-row *ngFor="let fruit of fruits" (removed)="remove(fruit)">
+          {{fruit}}
+          <button matChipRemove [attr.aria-label]="'remove ' + fruit">
+            <mat-icon>cancel</mat-icon>
+          </button>
+        </mat-chip-row>
+      </mat-chip-grid>
+      <input placeholder="New Subject..." #fruitInput [formControl]="fruitCtrl"
+        [matChipInputFor]="chipGrid" [matAutocomplete]="auto"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        (matChipInputTokenEnd)="add($event)"
+        [disabled]="selectedSubjectCount >= 5" />
+      <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+        <mat-option *ngFor="let fruit of filteredFruits | async" [value]="fruit">
+          {{fruit}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    
+    <div *ngIf="selectedSubjectCount >= 5">
+      <p>*You can only add a maximum of 5 subjects.</p>
+    </div>
+  </form>
+  
