@@ -1,0 +1,8 @@
+<form [formGroup]="mobileNumberForm">
+    <mat-form-field>
+      <input matInput type="tel" formControlName="mobileNumber" placeholder="Mobile Number">
+      <mat-error *ngIf="mobileNumberFormControl.hasError('required')">Mobile number is required</mat-error>
+      <mat-error *ngIf="mobileNumberFormControl.hasError('pattern')">Only numbers are allowed</mat-error>
+    </mat-form-field>
+  </form>
+  

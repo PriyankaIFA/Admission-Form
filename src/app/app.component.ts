@@ -11,7 +11,11 @@ interface FormData {
   email: string;
   address1: string;
   address2: string;
-}
+}  
+
+
+
+
 
 @Component({
   selector: 'app-root',

@@ -21,6 +21,9 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatIconModule} from '@angular/material/icon';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { EmailIdComponent } from './email-id/email-id.component';
+import { MobileNumberComponent } from './mobile-number/mobile-number.component';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +31,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     PostalComponent,
     ChipsComponent,
     DatePickerComponent,
+    EmailIdComponent,
+    MobileNumberComponent,
+ 
     
   ],
   imports: [
@@ -43,7 +49,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatChipsModule,
     MatAutocompleteModule,
     MatIconModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    // FormGroup, 
+    // FormControl
     ],
   providers: [],
   bootstrap: [AppComponent],

@@ -13,6 +13,9 @@ import { map, startWith } from 'rxjs/operators';
   styleUrls: ['./chips.component.css']
 })
 export class ChipsComponent {
+  formData = {
+    favoriteSubject: ''
+  };
   separatorKeysCodes: number[] = [ENTER, COMMA];
   fruitCtrl = new FormControl('');
   filteredFruits: Observable<string[]>;
