@@ -5,9 +5,14 @@
   z-index: 1;
   padding: 10px 0;
   margin-bottom: 20px;
+<<<<<<< HEAD
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+=======
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Lighter shadow color */
+>>>>>>> 5f84c032689fc0f296369ccbf832a2473556ef38
   width: 100%;
 }
+
 
 .div1 {
   border: 1px solid #ccc;
